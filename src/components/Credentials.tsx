@@ -2,7 +2,6 @@ import React from 'react';
 import {
   BookOpenIcon,
   AwardIcon,
-  BadgeCheckIcon,
   StarIcon,
   GlobeIcon,
   CreditCardIcon } from

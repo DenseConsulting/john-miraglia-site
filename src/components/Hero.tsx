@@ -41,17 +41,23 @@ export function Hero() {
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center space-x-6">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors">
+                  {link.name}
+                </a>
+              ))}
               <a
                 href="tel:3128292308"
                 className="inline-flex items-center text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors">
-                
                 <PhoneIcon className="w-4 h-4 mr-2" />
                 (312) 829-2308
               </a>
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-sm text-navy-900 bg-gold-500 hover:bg-gold-400 transition-colors shadow-sm">
-                
                 Free Consultation
               </a>
             </nav>
@@ -77,19 +83,26 @@ export function Hero() {
         {isMenuOpen &&
         <div className="md:hidden bg-navy-900 border-t border-navy-700">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-navy-800"
+                  onClick={() => setIsMenuOpen(false)}>
+                  {link.name}
+                </a>
+              ))}
               <a
-              href="tel:3128292308"
-              className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-navy-800"
-              onClick={() => setIsMenuOpen(false)}>
-              
+                href="tel:3128292308"
+                className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-navy-800"
+                onClick={() => setIsMenuOpen(false)}>
                 <PhoneIcon className="w-4 h-4 mr-2" />
                 (312) 829-2308
               </a>
               <a
-              href="#contact"
-              className="block w-full text-center mt-4 px-6 py-3 border border-transparent text-base font-medium rounded-sm text-navy-900 bg-gold-500 hover:bg-gold-400"
-              onClick={() => setIsMenuOpen(false)}>
-              
+                href="#contact"
+                className="block w-full text-center mt-4 px-6 py-3 border border-transparent text-base font-medium rounded-sm text-navy-900 bg-gold-500 hover:bg-gold-400"
+                onClick={() => setIsMenuOpen(false)}>
                 Free Consultation
               </a>
             </div>

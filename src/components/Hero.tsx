@@ -137,7 +137,7 @@ export function Hero() {
               </span>
               <span className="flex items-center">
                 <span>Licensed 24 Years</span>
-                <span className="text-gold-500 mx-2 text-xs">▶</span>
+                <span className="text-gold-500 mx-2 text-xs"></span>
               </span>
             </div>
           </div>

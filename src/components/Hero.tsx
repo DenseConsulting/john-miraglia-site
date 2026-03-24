@@ -35,7 +35,7 @@ export function Hero() {
                 href="#"
                 className="font-heading text-2xl font-bold tracking-wider text-white">
                 
-                Law Office of John M. Miraglia
+                Chicago Criminal Defense Attorney John M. Miraglia
               </a>
             </div>
 
@@ -108,14 +108,14 @@ export function Hero() {
               Chicago Criminal Defense Attorney
             </p>
             <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-tight mb-6">
-              John Michael Miraglia
+              John M. Miraglia
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 font-light mb-8 border-l-4 border-gold-500 pl-4">
-              Attorney at Law — John M. Miraglia, Ltd.
+              Attorney at Law
             </p>
 
             <blockquote className="text-2xl md:text-3xl font-heading italic text-white mb-12 opacity-90">
-              "An unstoppable trial lawyer with absolute professionalism."
+              "An unstoppable lawyer with absolute professionalism."
             </blockquote>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
@@ -139,11 +139,6 @@ export function Hero() {
                 <span>Licensed 24 Years</span>
                 <span className="text-gold-500 mx-2 text-xs">▶</span>
               </span>
-              <span className="flex items-center">
-                <span>Illinois & Washington</span>
-                <span className="text-gold-500 mx-2 text-xs">▶</span>
-              </span>
-              <span>Bilingual: English & Spanish</span>
             </div>
           </div>
         </div>

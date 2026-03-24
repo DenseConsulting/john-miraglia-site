@@ -34,8 +34,7 @@ export function Hero() {
               <a
                 href="#"
                 className="font-heading text-2xl font-bold tracking-wider text-white">
-                
-                Chicago Criminal Defense Attorney John M. Miraglia
+                Attorney John M. Miraglia
               </a>
             </div>
 

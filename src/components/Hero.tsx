@@ -1,28 +1,7 @@
 import React, { useState } from 'react';
 import { MenuIcon, XIcon, PhoneIcon } from 'lucide-react';
 export function Hero() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navLinks = [
-  {
-    name: 'About',
-    href: '#about'
-  },
-  {
-    name: 'Practice Areas',
-    href: '#practice-areas'
-  },
-  {
-    name: 'Why Us',
-    href: '#why-us'
-  },
-  {
-    name: 'Testimonials',
-    href: '#testimonials'
-  },
-  {
-    name: 'Contact',
-    href: '#contact'
-  }];
+
 
   return (
     <section className="relative bg-navy-800 text-white min-h-screen flex flex-col">

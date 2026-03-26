@@ -27,7 +27,7 @@ export function Hero() {
    return (
      <section className="relative bg-navy-800 text-white min-h-screen flex flex-col">
        {/* Navigation */}
-       <header className="absolute top-0 left-0 right-0 z-50">
+       <header className="absolute top-0 left-0 right-0 z-50 hidden">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="flex justify-between items-center py-6">
              <div className="flex-shrink-0">
@@ -179,4 +179,4 @@ export function Hero() {
          </div>
        </div>
      </section>);
- }
+}

@@ -55,9 +55,12 @@ export function Contact() {
                     <h4 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-1">
                       Phone
                     </h4>
-                    <p className="text-white">
-                      Contact via Avvo for direct number
-                    </p>
+                   <a
+  href="tel:13128292308"
+  className="text-white font-medium hover:text-gold-400 transition-colors"
+>
+  (312) 829-2308
+</a>
                   </div>
                 </div>
 

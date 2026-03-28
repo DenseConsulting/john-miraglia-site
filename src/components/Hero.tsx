@@ -92,17 +92,17 @@ export function Hero() {
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-7rem)]">
             <div className="max-w-3xl">
               <p className="text-gold-400 font-semibold tracking-widest uppercase text-sm mb-4">
-                Chicago Criminal Defense Attorney
-              </p>
+  Chicago Criminal Defense Attorney
+</p>
 
-              <h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-tight mb-6">
-                Aggressive Criminal Defense When Everything Is On The Line
-              </h1>
+<h1 className="text-5xl md:text-7xl font-heading font-bold text-white leading-tight mb-6">
+  Aggressive Criminal Defense When Everything Is On The Line
+</h1>
 
-              <p className="text-xl md:text-2xl text-gray-300 font-light mb-8 border-l-4 border-gold-500 pl-4">
-                John Miraglia fights for clients facing serious charges in Chicago
-                and throughout Illinois.
-              </p>
+<p className="text-xl md:text-2xl text-gray-300 font-light mb-8 border-l-4 border-gold-500 pl-4">
+  John Miraglia is a Chicago criminal defense attorney who fights for clients
+  facing serious charges throughout Chicago and Illinois.
+</p>
 
               <blockquote className="text-2xl md:text-3xl font-heading italic text-white mb-12 opacity-90">
                 Trusted trial counsel. Strategic defense. Immediate action when
@@ -139,11 +139,11 @@ export function Hero() {
 
             <div className="hidden lg:block">
               <div className="relative h-[720px] w-full rounded-sm overflow-hidden border border-navy-700 shadow-2xl">
-                <img
-                  src="/john-miraglia-hero.jpg"
-                  alt="John Miraglia"
-                  className="h-full w-full object-cover object-center"
-                />
+<img
+  src="/john-miraglia-hero.jpg"
+  alt="John Miraglia, Chicago criminal defense attorney"
+  className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
+/>
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-900/55 via-transparent to-navy-900/10" />
               </div>
             </div>

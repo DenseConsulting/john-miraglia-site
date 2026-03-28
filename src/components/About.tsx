@@ -20,11 +20,12 @@ export function About() {
                 based in Chicago, Illinois, with over two decades of courtroom
                 experience. Licensed since 2001, he has built a reputation as a
                 tenacious advocate who fights relentlessly for his clients'
-                rights and freedoms.
+                rights and freedoms.  
               </p>
               <p>
-                Operating through his firm, John M. Miraglia, Ltd., John handles
-                a wide range of matters — from serious criminal charges to civil
+                Operating through his firm, John M. Miraglia, Ltd., John Miraglia represents 
+                clients in Chicago and throughout Cook County in a wide range of criminal defense matters.
+                — from serious criminal charges to civil
                 rights violations and discrimination claims. His clients
                 describe him as "unstoppable" and someone who is always looking
                 out for their best interests.

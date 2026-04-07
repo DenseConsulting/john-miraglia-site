@@ -27,16 +27,7 @@ export function Hero() {
               >
                 John M. Miraglia
               </a>
-
-              {/* Mobile Call Button */}
-              <a
-                href="tel:13128292308"
-                className="mt-1 inline-block md:hidden text-sm font-semibold bg-red-600 text-white px-3 py-1 rounded"
-              >
-                Call (312) 829-2308
-              </a>
-            </div>
-
+</div>
             {/* DESKTOP NAV */}
             <nav className="hidden md:flex items-center space-x-8">
               {navLinks.map((link) => (

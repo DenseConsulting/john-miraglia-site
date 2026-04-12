@@ -1,6 +1,7 @@
 import React from 'react';
 export function Footer() {
-  return <footer className="bg-navy-900 py-12 border-t border-navy-800">
+  return (
+    <footer className="bg-navy-900 py-12 border-t border-navy-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
         <h2 className="text-2xl font-heading font-bold text-white mb-4">
           John M. Miraglia, Ltd.
@@ -18,5 +19,6 @@ export function Footer() {
           for any individual case or situation.
         </p>
       </div>
-    </footer>;
+    </footer>);
+
 }

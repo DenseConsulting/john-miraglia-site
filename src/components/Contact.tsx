@@ -64,9 +64,7 @@ export function Contact() {
                       Office Hours
                     </h4>
                     <p className="text-white">
-                      Monday – Friday: 9:00 AM – 8:00 PM
-                      <br />
-                      Weekends: By Appointment
+                      OPEN 24/7
                     </p>
                   </div>
                 </div>

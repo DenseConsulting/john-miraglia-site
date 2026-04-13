@@ -2,7 +2,7 @@ import React from 'react';
 import { CaseStrategiesHero } from '../components/case-strategies/CaseStrategiesHero';
 import { CaseStrategiesNav } from '../components/case-strategies/CaseStrategiesNav';
 import { ResultsBar } from '../components/case-strategies/ResultsBar';
-import { NotableVictories } from '../components/case-strategies/NotableVictories';
+// import { NotableVictories } from '../components/case-strategies/NotableVictories';
 import { StrategicMethods } from '../components/case-strategies/StrategicMethods';
 import { CaseTypes } from '../components/case-strategies/CaseTypes';
 import { TrialPhilosophy } from '../components/case-strategies/TrialPhilosophy';
@@ -14,7 +14,7 @@ export function CaseStrategiesPage() {
       <CaseStrategiesNav />
       <CaseStrategiesHero />
       <ResultsBar />
-      <NotableVictories />
+      {/* <NotableVictories /> */}
       <StrategicMethods />
       <CaseTypes />
       <TrialPhilosophy />

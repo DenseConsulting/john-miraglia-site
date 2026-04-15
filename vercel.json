@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/((?!assets/|pasted-image|vite.svg|sitemap.xml|robots.txt).* )",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]

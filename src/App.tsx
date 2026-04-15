@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { HomePage } from './pages/HomePage';
 import { CaseStrategiesPage } from './pages/CaseStrategiesPage';
 export function App() {
@@ -19,9 +20,10 @@ export function App() {
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
-  return currentPage === 'case-strategies' ?
-  <CaseStrategiesPage /> :
-
-  <HomePage />;
-
+  return (
+    <>
+      {currentPage === 'case-strategies' ? <CaseStrategiesPage /> : <HomePage />}
+      <SpeedInsights />
+    </>
+  );
 }

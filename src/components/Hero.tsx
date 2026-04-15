@@ -48,7 +48,7 @@ export function Hero() {
                 Contact
               </a>
               <a
-                href="#/case-strategies"
+                href="/case-strategies"
                 className="text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors">
                 
                 Case Strategies
@@ -116,7 +116,7 @@ export function Hero() {
                 Contact
               </a>
               <a
-              href="#/case-strategies"
+              href="/case-strategies"
               onClick={() => setIsMenuOpen(false)}
               className="block text-lg font-medium text-gray-300 hover:text-gold-400 transition-colors py-2">
               

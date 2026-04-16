@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react';
 import { MenuIcon, XIcon, PhoneIcon } from 'lucide-react';
 export function Hero() {

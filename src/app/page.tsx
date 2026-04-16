@@ -7,7 +7,7 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus('submitting')
+    setStatus('submitting'
     
     // Simulate form submission
     setTimeout(() => {

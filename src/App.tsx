@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { HomePage } from './pages/HomePage';
 import { CaseStrategiesPage } from './pages/CaseStrategiesPage';
 export function App() {
@@ -25,9 +26,10 @@ export function App() {
       window.removeEventListener('popstate', handleRouteChange);
     };
   }, []);
-  return currentPage === 'case-strategies' ?
-  <CaseStrategiesPage /> :
-
-  <HomePage />;
-
+  return (
+    <>
+      {currentPage === 'case-strategies' ? <CaseStrategiesPage /> : <HomePage />}
+      <SpeedInsights />
+    </>
+  );
 }

@@ -1,14 +1,27 @@
-'use client';
-
-import React from 'react';
+import React, { useState } from 'react';
 import {
   MapPinIcon,
   PhoneIcon,
   ClockIcon,
   GlobeIcon,
-  ArrowRightIcon } from
+  ArrowRightIcon,
+  CheckCircleIcon } from
 'lucide-react';
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+  };
+
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +33,7 @@ export function Contact() {
             Your Case Demands This Level of Defense
           </h2>
           <p className="text-lg text-gray-600">
-            Don't face criminal charges without an experienced trial attorne
+            Don't face criminal charges without an experienced trial attorney
             who knows how to win. Schedule a confidential consultation to
             discuss your case and explore your defense options.
           </p>
@@ -86,7 +99,22 @@ export function Contact() {
 
           {/* Contact Form Right Side */}
           <div className="lg:col-span-3 p-6 sm:p-10">
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            {isSubmitted ? (
+              <div className="h-full flex flex-col items-center justify-center text-center py-12">
+                <CheckCircleIcon className="w-16 h-16 text-gold-500 mb-6" />
+                <h3 className="text-3xl font-heading font-bold text-navy-800 mb-4">Message Sent</h3>
+                <p className="text-lg text-gray-600 max-w-md">
+                  Thank you for reaching out. John Miraglia will review your message and contact you shortly.
+                </p>
+                <button 
+                  onClick={() => setIsSubmitted(false)}
+                  className="mt-8 text-navy-600 font-semibold hover:text-navy-800 transition-colors"
+                >
+                  Send another message
+                </button>
+              </div>
+            ) : (
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label
@@ -190,10 +218,11 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-sm text-navy-900 bg-gold-500 hover:bg-gold-400 transition-colors shadow-sm">
+                disabled={isSubmitting}
+                className={`w-full flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-sm text-navy-900 bg-gold-500 hover:bg-gold-400 transition-colors shadow-sm ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}>
                 
-                Send Message
-                <ArrowRightIcon className="ml-2 w-5 h-5" />
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {!isSubmitting && <ArrowRightIcon className="ml-2 w-5 h-5" />}
               </button>
 
               <p className="text-xs text-gray-500 text-center mt-4">
@@ -202,6 +231,7 @@ export function Contact() {
                 information is kept strictly confidential.
               </p>
             </form>
+            )}
           </div>
         </div>
       </div>

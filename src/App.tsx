@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { StructuredData } from './components/StructuredData';
 import { HomePage } from './pages/HomePage';
 import { CaseStrategiesPage } from './pages/CaseStrategiesPage';
+
 export function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'case-strategies'>(
     'home'
@@ -28,6 +30,7 @@ export function App() {
   }, []);
   return (
     <>
+      <StructuredData />
       {currentPage === 'case-strategies' ? <CaseStrategiesPage /> : <HomePage />}
       <SpeedInsights />
     </>

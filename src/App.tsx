@@ -7,18 +7,24 @@ export function App() {
     'home'
   );
   useEffect(() => {
-    const handleHashChange = () => {
+    const handleRouteChange = () => {
+      const path = window.location.pathname;
       const hash = window.location.hash;
-      if (hash === '#/case-strategies') {
+      
+      if (path === '/case-strategies' || hash === '#/case-strategies') {
         setCurrentPage('case-strategies');
         window.scrollTo(0, 0);
       } else {
         setCurrentPage('home');
       }
     };
-    handleHashChange();
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    handleRouteChange();
+    window.addEventListener('hashchange', handleRouteChange);
+    window.addEventListener('popstate', handleRouteChange);
+    return () => {
+      window.removeEventListener('hashchange', handleRouteChange);
+      window.removeEventListener('popstate', handleRouteChange);
+    };
   }, []);
   return (
     <>

@@ -24,9 +24,9 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 bg-white rounded-sm shadow-xl overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-12 bg-white rounded-sm shadow-xl overflow-hidden">
           {/* Contact Info Left Side */}
-          <div className="lg:col-span-2 bg-navy-800 text-white p-10 flex flex-col justify-between">
+          <div className="lg:col-span-2 bg-navy-800 text-white p-6 sm:p-10 flex flex-col justify-between">
             <div>
               <h3 className="text-2xl font-heading font-bold mb-8">
                 Contact Information
@@ -83,7 +83,7 @@ export function Contact() {
           </div>
 
           {/* Contact Form Right Side */}
-          <div className="lg:col-span-3 p-10">
+          <div className="lg:col-span-3 p-6 sm:p-10">
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>

@@ -4,7 +4,7 @@ export function CaseStrategiesNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const scrollToSection = (sectionId: string) => {
     setIsMenuOpen(false);
-    window.location.href = '#/';
+    window.location.href = '/';
     setTimeout(() => {
       const el = document.getElementById(sectionId);
       if (el) {
@@ -18,12 +18,12 @@ export function CaseStrategiesNav() {
     <header className="absolute top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-5">
-          <a
-            href="#/"
-            className="font-heading text-xl font-bold tracking-wider text-white">
-            
-            John M. Miraglia
-          </a>
+            <a
+              href="/"
+              className="font-heading text-xl font-bold tracking-wider text-white">
+              
+              John M. Miraglia
+            </a>
 
           {/* Desktop Nav — identical to homepage */}
           <nav className="hidden lg:flex items-center space-x-6">
@@ -58,7 +58,7 @@ export function CaseStrategiesNav() {
               Contact
             </button>
             <a
-              href="#/case-strategies"
+              href="/case-strategies"
               className="text-sm font-medium text-gold-400 transition-colors">
               
               Case Strategies
@@ -121,7 +121,7 @@ export function CaseStrategiesNav() {
               Contact
             </button>
             <a
-            href="#/case-strategies"
+            href="/case-strategies"
             onClick={() => setIsMenuOpen(false)}
             className="block text-lg font-medium text-gold-400 transition-colors py-2">
             

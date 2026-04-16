@@ -20,7 +20,7 @@ export function Contact() {
             Your Case Demands This Level of Defense
           </h2>
           <p className="text-lg text-gray-600">
-            Don't face criminal charges without an experienced trial attorney
+            Don't face criminal charges without an experienced trial attorne
             who knows how to win. Schedule a confidential consultation to
             discuss your case and explore your defense options.
           </p>

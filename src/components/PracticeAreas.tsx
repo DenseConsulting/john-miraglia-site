@@ -40,7 +40,7 @@ export function PracticeAreas() {
   }];
 
   return (
-    <section id="practice-areas" className="py-20 bg-gray-50">
+    <section id="practice-areas" className="py-12 sm:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-gold-600 font-semibold tracking-widest uppercase text-sm">
@@ -61,7 +61,7 @@ export function PracticeAreas() {
             return (
               <div
                 key={index}
-                className="bg-navy-800 p-8 rounded-sm shadow-md hover:shadow-xl transition-shadow duration-300 border-t-4 border-gold-500 flex flex-col h-full">
+                className="bg-navy-800 p-6 sm:p-8 rounded-sm shadow-md hover:shadow-xl transition-shadow duration-300 border-t-4 border-gold-500 flex flex-col h-full">
                 
                 <div className="mb-6 inline-flex items-center justify-center w-14 h-14 rounded-full bg-navy-700 text-gold-400">
                   <Icon className="w-7 h-7" />

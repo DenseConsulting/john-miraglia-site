@@ -19,9 +19,9 @@ export function Stats() {
   }];
 
   return (
-    <section className="bg-navy-900 py-12 border-y border-navy-700">
+    <section className="bg-navy-900 py-8 sm:py-12 border-y border-navy-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x divide-navy-700">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 sm:gap-8 text-center divide-x-0 md:divide-x divide-navy-700">
           {stats.map((stat, index) =>
           <div
             key={index}

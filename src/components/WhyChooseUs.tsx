@@ -23,7 +23,7 @@ export function WhyChooseUs() {
   }];
 
   return (
-    <section id="why-us" className="py-20 bg-navy-900 text-white">
+    <section id="why-us" className="py-12 sm:py-20 bg-navy-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16 max-w-3xl">
           <span className="text-gold-400 font-semibold tracking-widest uppercase text-sm">
@@ -40,8 +40,8 @@ export function WhyChooseUs() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
           {reasons.map((reason, index) =>
-          <div key={index} className="flex flex-col sm:flex-row items-start">
-              <div className="text-5xl md:text-6xl font-heading font-bold text-gold-500 opacity-80 mb-4 sm:mb-0 sm:mr-8 leading-none">
+          <div key={index} className="flex flex-col sm:flex-row items-start text-center sm:text-left">
+              <div className="text-5xl md:text-6xl font-heading font-bold text-gold-500 opacity-80 mb-4 sm:mb-0 sm:mr-8 leading-none w-full sm:w-auto">
                 {reason.num}
               </div>
               <div>

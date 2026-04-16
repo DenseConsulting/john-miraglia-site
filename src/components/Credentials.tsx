@@ -40,7 +40,7 @@ export function Credentials() {
   }];
 
   return (
-    <section className="py-20 bg-navy-800 text-white border-t border-navy-700">
+    <section className="py-12 sm:py-20 bg-navy-800 text-white border-t border-navy-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-gold-400 font-semibold tracking-widest uppercase text-sm">

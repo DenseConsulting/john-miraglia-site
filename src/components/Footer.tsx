@@ -7,9 +7,10 @@ export function Footer() {
           John M. Miraglia, Ltd.
         </h2>
 
-        <p className="text-gray-400 text-sm mb-6">
-          910 W. Van Buren St. #2S, Chicago, IL 60607 &nbsp;|&nbsp; © 2026 John
-          M. Miraglia, Ltd. All rights reserved.
+        <p className="text-gray-400 text-sm mb-6 flex flex-col sm:flex-row items-center sm:space-x-2">
+          <span>910 W. Van Buren St. #2S, Chicago, IL 60607</span>
+          <span className="hidden sm:inline">|</span>
+          <span>© 2026 John M. Miraglia, Ltd. All rights reserved.</span>
         </p>
 
         <p className="text-gray-500 text-xs max-w-2xl">

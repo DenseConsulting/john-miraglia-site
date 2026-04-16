@@ -1,7 +1,7 @@
 import React from 'react';
 export function About() {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-12 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
           {/* Main Content */}
@@ -42,7 +42,7 @@ export function About() {
 
           {/* Sidebar Details */}
           <div className="lg:col-span-1">
-            <div className="bg-navy-50 p-8 rounded-sm border border-navy-100">
+            <div className="bg-navy-50 p-6 sm:p-8 rounded-sm border border-navy-100">
               <h3 className="text-xl font-heading font-bold text-navy-800 mb-6 border-b border-navy-200 pb-4">
                 Firm Details
               </h3>

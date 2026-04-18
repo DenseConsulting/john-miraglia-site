@@ -11,31 +11,31 @@ export function PracticeAreas() {
   {
     title: 'Criminal Defense',
     description:
-    'Defending clients against misdemeanor and felony charges with a strategic, aggressive approach designed to protect your freedom and future.',
+    'Defending clients against misdemeanor and felony charges in both Illinois state and federal courts with a strategic, aggressive approach designed to protect your freedom and future.',
     icon: ShieldIcon
   },
   {
     title: 'Litigation',
     description:
-    'Comprehensive litigation services for civil disputes, leveraging courtroom expertise built over more than two decades of active practice.',
+    'Comprehensive litigation services for civil disputes at the state and federal level, leveraging courtroom expertise built over more than two decades of active practice.',
     icon: ScaleIcon
   },
   {
     title: 'Civil Rights',
     description:
-    'Standing up for individuals whose constitutional rights have been violated by government actors, law enforcement, or institutions.',
+    'Standing up for individuals whose constitutional rights have been violated by government actors, law enforcement, or institutions — pursuing claims under both state and federal civil rights statutes.',
     icon: GavelIcon
   },
   {
     title: 'Discrimination',
     description:
-    'Protecting clients from unlawful discrimination in employment, housing, and public accommodations under state and federal law.',
+    'Protecting clients from unlawful discrimination in employment, housing, and public accommodations, with claims pursued under both state and federal anti-discrimination statutes.',
     icon: UsersIcon
   },
   {
     title: 'Juvenile Law',
     description:
-    'Compassionate and effective representation for minors facing the juvenile justice system, focusing on rehabilitation and protecting their futures.',
+    'Compassionate and effective representation for minors facing the juvenile justice system at the state and federal level, focusing on rehabilitation and protecting their futures.',
     icon: HeartHandshakeIcon
   }];
 
@@ -50,8 +50,9 @@ export function PracticeAreas() {
             Practice Areas
           </h2>
           <p className="text-lg text-gray-600">
-            John Miraglia provides aggressive, skilled representation across a
-            broad spectrum of legal matters in Illinois and beyond.
+            John Miraglia provides aggressive, skilled representation across
+            state and federal courts, handling the full spectrum of criminal,
+            civil, and constitutional matters in Illinois and beyond.
           </p>
         </div>
 

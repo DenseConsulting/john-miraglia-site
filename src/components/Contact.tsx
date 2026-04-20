@@ -138,6 +138,8 @@ export function Contact() {
               </div>
             ) : (
             <form className="space-y-6" onSubmit={handleSubmit}>
+              {/* Formspree honeypot - hidden from humans, catches bots */}
+              <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label

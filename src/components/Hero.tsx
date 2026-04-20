@@ -1,8 +1,23 @@
 'use client';
 import React, { useState } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { MenuIcon, XIcon, PhoneIcon } from 'lucide-react';
+
 export function Hero() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
+
+  const scrollToSection = (sectionId: string) => {
+    setIsMenuOpen(false);
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      router.push(`/#${sectionId}`);
+    }
+  };
+
   return (
     <section className="relative bg-navy-800 text-white min-h-screen flex flex-col">
       {/* Navigation */}
@@ -12,54 +27,46 @@ export function Hero() {
             <a
               href="/"
               className="font-heading text-xl font-bold tracking-wider text-white">
-              
               John M. Miraglia
             </a>
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center space-x-6">
-              <a
-                href="/about"
+              <button
+                onClick={() => scrollToSection('about')}
                 className="text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors">
-                
                 About
-              </a>
-              <a
-                href="/practice-areas"
+              </button>
+              <button
+                onClick={() => scrollToSection('practice-areas')}
                 className="text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors">
-                
                 Practice Areas
-              </a>
-              <a
-                href="/why-us"
+              </button>
+              <button
+                onClick={() => scrollToSection('why-us')}
                 className="text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors">
-                
                 Why Us
-              </a>
-              <a
-                href="/testimonials"
+              </button>
+              <button
+                onClick={() => scrollToSection('testimonials')}
                 className="text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors">
-                
                 Testimonials
-              </a>
-              <a
-                href="/contact"
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
                 className="text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors">
-                
                 Contact
-              </a>
-              <a
+              </button>
+              <Link
                 href="/case-strategies"
                 className="text-sm font-medium text-gray-300 hover:text-gold-400 transition-colors">
-                
                 Case Strategies
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <button
+                onClick={() => scrollToSection('contact')}
                 className="inline-flex items-center justify-center px-5 py-2.5 border border-transparent text-sm font-medium rounded-sm text-navy-900 bg-gold-500 hover:bg-gold-400 transition-colors shadow-sm">
-                
                 Request a Confidential Consultation
-              </a>
+              </button>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -67,10 +74,8 @@ export function Hero() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="lg:hidden p-2 text-white hover:text-gold-400 transition-colors"
               aria-label="Toggle menu">
-              
               {isMenuOpen ?
               <XIcon className="w-6 h-6" /> :
-
               <MenuIcon className="w-6 h-6" />
               }
             </button>
@@ -81,62 +86,48 @@ export function Hero() {
         {isMenuOpen &&
         <div className="lg:hidden absolute top-full left-0 right-0 bg-navy-900 border-t border-gray-700 shadow-xl z-40">
             <nav className="px-4 py-6 space-y-4">
-              <a
-              href="/about"
-              onClick={() => setIsMenuOpen(false)}
-              className="block text-lg font-medium text-gray-300 hover:text-gold-400 transition-colors py-2">
-              
+              <button
+                onClick={() => scrollToSection('about')}
+                className="block w-full text-left text-lg font-medium text-gray-300 hover:text-gold-400 transition-colors py-2">
                 About
-              </a>
-              <a
-              href="/practice-areas"
-              onClick={() => setIsMenuOpen(false)}
-              className="block text-lg font-medium text-gray-300 hover:text-gold-400 transition-colors py-2">
-              
+              </button>
+              <button
+                onClick={() => scrollToSection('practice-areas')}
+                className="block w-full text-left text-lg font-medium text-gray-300 hover:text-gold-400 transition-colors py-2">
                 Practice Areas
-              </a>
-              <a
-              href="/why-us"
-              onClick={() => setIsMenuOpen(false)}
-              className="block text-lg font-medium text-gray-300 hover:text-gold-400 transition-colors py-2">
-              
+              </button>
+              <button
+                onClick={() => scrollToSection('why-us')}
+                className="block w-full text-left text-lg font-medium text-gray-300 hover:text-gold-400 transition-colors py-2">
                 Why Us
-              </a>
-              <a
-              href="/testimonials"
-              onClick={() => setIsMenuOpen(false)}
-              className="block text-lg font-medium text-gray-300 hover:text-gold-400 transition-colors py-2">
-              
+              </button>
+              <button
+                onClick={() => scrollToSection('testimonials')}
+                className="block w-full text-left text-lg font-medium text-gray-300 hover:text-gold-400 transition-colors py-2">
                 Testimonials
-              </a>
-              <a
-              href="/contact"
-              onClick={() => setIsMenuOpen(false)}
-              className="block text-lg font-medium text-gray-300 hover:text-gold-400 transition-colors py-2">
-              
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="block w-full text-left text-lg font-medium text-gray-300 hover:text-gold-400 transition-colors py-2">
                 Contact
-              </a>
-              <a
-              href="/case-strategies"
-              onClick={() => setIsMenuOpen(false)}
-              className="block text-lg font-medium text-gray-300 hover:text-gold-400 transition-colors py-2">
-              
+              </button>
+              <Link
+                href="/case-strategies"
+                onClick={() => setIsMenuOpen(false)}
+                className="block text-lg font-medium text-gray-300 hover:text-gold-400 transition-colors py-2">
                 Case Strategies
-              </a>
+              </Link>
               <a
-              href="tel:3128292308"
-              className="block text-lg font-medium text-gray-300 hover:text-gold-400 transition-colors py-2">
-              
+                href="tel:3128292308"
+                className="block text-lg font-medium text-gray-300 hover:text-gold-400 transition-colors py-2">
                 <PhoneIcon className="w-5 h-5 inline mr-2" />
                 (312) 829-2308
               </a>
-              <a
-              href="/contact"
-              onClick={() => setIsMenuOpen(false)}
-              className="block w-full text-center px-6 py-3 border border-transparent text-base font-medium rounded-sm text-navy-900 bg-gold-500 hover:bg-gold-400 transition-colors shadow-sm mt-4">
-              
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="block w-full text-center px-6 py-3 border border-transparent text-base font-medium rounded-sm text-navy-900 bg-gold-500 hover:bg-gold-400 transition-colors shadow-sm mt-4">
                 Request a Confidential Consultation
-              </a>
+              </button>
             </nav>
           </div>
         }
@@ -167,12 +158,11 @@ export function Hero() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center lg:items-start space-y-4 sm:space-y-0 sm:space-x-6 mb-10">
-                <a
-                  href="/contact"
+                <button
+                  onClick={() => scrollToSection('contact')}
                   className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-sm text-navy-900 bg-gold-500 hover:bg-gold-400 transition-colors shadow-lg w-full sm:w-auto">
-                  
                   Request a Confidential Consultation
-                </a>
+                </button>
               </div>
 
               {/* Bottom Stats Line */}
@@ -199,7 +189,6 @@ export function Hero() {
                     src="/pasted-image.jpg"
                     alt="John M. Miraglia, Attorney at Law"
                     className="w-full h-full object-cover" />
-                  
                 </div>
                 <div className="absolute -bottom-3 -right-3 w-full h-full border-2 border-gold-500/20 rounded-sm -z-10"></div>
               </div>
@@ -208,5 +197,4 @@ export function Hero() {
         </div>
       </div>
     </section>);
-
 }

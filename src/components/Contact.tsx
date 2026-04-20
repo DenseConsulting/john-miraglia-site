@@ -194,6 +194,7 @@ export function Contact() {
                     type="tel"
                     id="phone"
                     name="phone"
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-navy-500 focus:border-navy-500 outline-none transition-colors"
                     placeholder="(555) 123-4567" />
                 </div>
@@ -208,6 +209,7 @@ export function Contact() {
                 <select
                   id="matter"
                   name="matter"
+                  required
                   defaultValue=""
                   className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-navy-500 focus:border-navy-500 outline-none transition-colors bg-white">
                   <option value="" disabled>
@@ -231,6 +233,7 @@ export function Contact() {
                 <textarea
                   id="description"
                   name="description"
+                  required
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-navy-500 focus:border-navy-500 outline-none transition-colors resize-none"
                   placeholder="Please briefly describe your situation...">

@@ -7,11 +7,11 @@ export function ResultsBar() {
   },
   {
     value: 'ACQUITTED',
-    label: 'Exposed false testimony'
+    label: 'Challenged unlawful evidence'
   },
   {
     value: 'DISMISSED',
-    label: 'Exposed false testimony'
+    label: 'Proved procedural violations'
   },
   {
     value: '$45K',

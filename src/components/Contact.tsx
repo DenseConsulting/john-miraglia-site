@@ -12,16 +12,37 @@ import {
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    setError('');
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xlgogbzw', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        form.reset();
+      } else {
+        const data = await response.json();
+        setError(data?.errors?.map((err: { message: string }) => err.message).join(', ') || 'Something went wrong. Please try again.');
+      }
+    } catch {
+      setError('Network error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -122,29 +143,29 @@ export function Contact() {
                   <label
                     htmlFor="firstName"
                     className="block text-sm font-medium text-gray-700 mb-2">
-                    
                     First Name
                   </label>
                   <input
                     type="text"
                     id="firstName"
+                    name="firstName"
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-navy-500 focus:border-navy-500 outline-none transition-colors"
                     placeholder="John" />
-                  
                 </div>
                 <div>
                   <label
                     htmlFor="lastName"
                     className="block text-sm font-medium text-gray-700 mb-2">
-                    
                     Last Name
                   </label>
                   <input
                     type="text"
                     id="lastName"
+                    name="lastName"
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-navy-500 focus:border-navy-500 outline-none transition-colors"
                     placeholder="Doe" />
-                  
                 </div>
               </div>
 
@@ -153,29 +174,28 @@ export function Contact() {
                   <label
                     htmlFor="email"
                     className="block text-sm font-medium text-gray-700 mb-2">
-                    
                     Email Address
                   </label>
                   <input
                     type="email"
                     id="email"
+                    name="email"
+                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-navy-500 focus:border-navy-500 outline-none transition-colors"
                     placeholder="john@example.com" />
-                  
                 </div>
                 <div>
                   <label
                     htmlFor="phone"
                     className="block text-sm font-medium text-gray-700 mb-2">
-                    
                     Phone Number
                   </label>
                   <input
                     type="tel"
                     id="phone"
+                    name="phone"
                     className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-navy-500 focus:border-navy-500 outline-none transition-colors"
                     placeholder="(555) 123-4567" />
-                  
                 </div>
               </div>
 
@@ -183,23 +203,22 @@ export function Contact() {
                 <label
                   htmlFor="matter"
                   className="block text-sm font-medium text-gray-700 mb-2">
-                  
                   Legal Matter
                 </label>
                 <select
                   id="matter"
+                  name="matter"
                   defaultValue=""
                   className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-navy-500 focus:border-navy-500 outline-none transition-colors bg-white">
-                  
                   <option value="" disabled>
                     Select a practice area...
                   </option>
-                  <option value="criminal">Criminal Defense</option>
-                  <option value="litigation">Litigation</option>
-                  <option value="civil">Civil Rights</option>
-                  <option value="discrimination">Discrimination</option>
-                  <option value="juvenile">Juvenile Law</option>
-                  <option value="other">Other</option>
+                  <option value="Criminal Defense">Criminal Defense</option>
+                  <option value="Litigation">Litigation</option>
+                  <option value="Civil Rights">Civil Rights</option>
+                  <option value="Discrimination">Discrimination</option>
+                  <option value="Juvenile Law">Juvenile Law</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
@@ -207,22 +226,25 @@ export function Contact() {
                 <label
                   htmlFor="description"
                   className="block text-sm font-medium text-gray-700 mb-2">
-                  
                   Brief Description
                 </label>
                 <textarea
                   id="description"
+                  name="description"
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:ring-2 focus:ring-navy-500 focus:border-navy-500 outline-none transition-colors resize-none"
                   placeholder="Please briefly describe your situation...">
                 </textarea>
               </div>
 
+              {error && (
+                <p className="text-red-600 text-sm text-center">{error}</p>
+              )}
+
               <button
                 type="submit"
                 disabled={isSubmitting}
                 className={`w-full flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-sm text-navy-900 bg-gold-500 hover:bg-gold-400 transition-colors shadow-sm ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}>
-                
                 {isSubmitting ? 'Sending...' : 'Send Message'}
                 {!isSubmitting && <ArrowRightIcon className="ml-2 w-5 h-5" />}
               </button>

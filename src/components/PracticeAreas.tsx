@@ -9,31 +9,31 @@ import {
 export function PracticeAreas() {
   const practices = [
   {
-    title: 'Criminal Defense',
+    title: 'Criminal Defense \u2014 State & Federal',
     description:
     'Defending clients against misdemeanor and felony charges in both Illinois state and federal courts with a strategic, aggressive approach designed to protect your freedom and future.',
     icon: ShieldIcon
   },
   {
-    title: 'Litigation',
+    title: 'Litigation \u2014 State & Federal',
     description:
     'Comprehensive litigation services for civil disputes at the state and federal level, leveraging courtroom expertise built over more than two decades of active practice.',
     icon: ScaleIcon
   },
   {
-    title: 'Civil Rights',
+    title: 'Civil Rights \u2014 State & Federal',
     description:
     'Standing up for individuals whose constitutional rights have been violated by government actors, law enforcement, or institutions — pursuing claims under both state and federal civil rights statutes.',
     icon: GavelIcon
   },
   {
-    title: 'Discrimination',
+    title: 'Discrimination \u2014 State & Federal',
     description:
     'Protecting clients from unlawful discrimination in employment, housing, and public accommodations, with claims pursued under both state and federal anti-discrimination statutes.',
     icon: UsersIcon
   },
   {
-    title: 'Juvenile Law',
+    title: 'Juvenile Law \u2014 State & Federal',
     description:
     'Compassionate and effective representation for minors facing the juvenile justice system at the state and federal level, focusing on rehabilitation and protecting their futures.',
     icon: HeartHandshakeIcon
@@ -47,7 +47,7 @@ export function PracticeAreas() {
             What We Handle
           </span>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-navy-800 mt-3 mb-6">
-            Practice Areas
+            State & Federal Practice Areas
           </h2>
           <p className="text-lg text-gray-600">
             John Miraglia provides aggressive, skilled representation across

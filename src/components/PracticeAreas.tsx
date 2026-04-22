@@ -44,15 +44,16 @@ export function PracticeAreas() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-gold-600 font-semibold tracking-widest uppercase text-sm">
-            What We Handle
+            Areas of Focus
           </span>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-navy-800 mt-3 mb-6">
-            State & Federal Practice Areas
+            State and Federal Criminal Defense
           </h2>
           <p className="text-lg text-gray-600">
-            John Miraglia provides aggressive, skilled representation across
-            state and federal courts, handling the full spectrum of criminal,
-            civil, and constitutional matters in Illinois and beyond.
+            As a top criminal defense and trial attorney, John Miraglia delivers
+            dedicated, experienced advocacy in both state and federal courts,
+            managing a comprehensive range of criminal, civil, and constitutional
+            cases throughout Illinois and beyond.
           </p>
         </div>
 

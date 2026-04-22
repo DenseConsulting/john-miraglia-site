@@ -1,5 +1,5 @@
 import React from 'react';
-import { StarIcon, DiamondIcon } from 'lucide-react';
+import { StarIcon } from 'lucide-react';
 export function Testimonials() {
   return (
     <section id="testimonials" className="py-12 sm:py-20 bg-white">
@@ -59,33 +59,24 @@ export function Testimonials() {
             </div>
           </div>
 
-          {/* Peer Endorsement */}
-          <div className="bg-navy-800 text-white p-6 sm:p-8 rounded-sm shadow-md flex flex-col relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-4 opacity-10">
-              <DiamondIcon className="w-24 h-24 text-gold-500" />
+          {/* Client Review 3 */}
+          <div className="bg-gray-50 p-6 sm:p-8 rounded-sm border border-gray-100 shadow-sm flex flex-col">
+            <div className="flex text-gold-500 mb-6">
+              {[...Array(5)].map((_, i) =>
+              <StarIcon key={i} className="w-5 h-5 fill-current" />
+              )}
             </div>
-            <div className="relative z-10 flex-grow flex flex-col">
-              <div className="flex items-center space-x-2 mb-6">
-                <DiamondIcon className="w-5 h-5 text-gold-400" />
-                <span className="text-xs font-bold tracking-widest uppercase text-gold-400">
-                  Peer Attorney Endorsement
-                </span>
-              </div>
-              <div className="flex text-gold-400 mb-6">
-                {[...Array(5)].map((_, i) =>
-                <StarIcon key={i} className="w-5 h-5 fill-current" />
-                )}
-              </div>
-              <blockquote className="text-gray-200 italic mb-8 flex-grow text-lg font-heading">
-                "I endorse this lawyer. Mr. Miraglia is an unstoppable trial
-                lawyer with absolute professionalism."
-              </blockquote>
-              <div className="border-t border-navy-600 pt-4">
-                <p className="font-bold text-white">Edward Johnson</p>
-                <p className="text-sm text-gray-400">
-                  Criminal Defense Attorney — February 2024 — Avvo Verified
-                </p>
-              </div>
+            <blockquote className="text-gray-700 italic mb-8 flex-grow">
+              "If you're in a legal situation and need an attorney who
+              will truly, sincerely, and professionally represent you, I
+              HIGHLY RECOMMEND Mr. MIRAGLIA. He's by far the
+              best attorney you probably never heard of."
+            </blockquote>
+            <div className="border-t border-gray-200 pt-4">
+              <p className="font-bold text-navy-800">Emanuel Myers</p>
+              <p className="text-sm text-gray-500">
+                Hired Attorney — Google Verified
+              </p>
             </div>
           </div>
         </div>

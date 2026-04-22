@@ -11,37 +11,37 @@ export function CaseTypes() {
   const caseTypes = [
   {
     icon: ShieldIcon,
-    title: 'Violent Crime Defense \u2014 State & Federal',
+    title: 'Violent Crime Defense',
     description:
     'Murder, assault, battery, armed violence, and other serious violent offenses prosecuted in state or federal court — requiring aggressive trial defense at every level.'
   },
   {
     icon: ScaleIcon,
-    title: 'Weapons & Gun Charges \u2014 State & Federal',
+    title: 'Weapons & Gun Charges',
     description:
     'Unlawful use of weapons, aggravated UUW, FOID violations, and federal firearms offenses — defending clients against state and federal gun charges.'
   },
   {
     icon: GavelIcon,
-    title: 'Sexual Assault Defense \u2014 State & Federal',
+    title: 'Sexual Assault Defense',
     description:
     'Criminal sexual assault, abuse charges, sex offender registry matters, and related allegations in both state and federal jurisdictions.'
   },
   {
     icon: FileTextIcon,
-    title: 'Juvenile Criminal Defense \u2014 State & Federal',
+    title: 'Juvenile Criminal Defense',
     description:
     'Protecting minors facing delinquency petitions and criminal charges in state juvenile court and federal proceedings.'
   },
   {
     icon: LockIcon,
-    title: 'Drug Crime Defense \u2014 State & Federal',
+    title: 'Drug Crime Defense',
     description:
     'Possession, distribution, trafficking, and prescription fraud — defending against drug charges at both the state and federal level.'
   },
   {
     icon: AlertTriangleIcon,
-    title: 'DUI & Traffic Offenses \u2014 State & Federal',
+    title: 'DUI & Traffic Offenses',
     description:
     'DUI defense, license reinstatement, traffic violations, and driving-related criminal charges in Illinois state courts and federal jurisdictions.'
   }];
@@ -54,7 +54,7 @@ export function CaseTypes() {
             Practice Focus
           </span>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-navy-800 mt-3 mb-6">
-            State &amp; Federal Cases We Handle
+            Cases We Handle
           </h2>
           <p className="text-lg text-gray-600">
             We defend clients facing the full spectrum of criminal charges

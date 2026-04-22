@@ -54,7 +54,7 @@ export function CaseTypes() {
             Practice Focus
           </span>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-navy-800 mt-3 mb-6">
-            Cases We Handle
+            State &amp; Federal Cases We Handle
           </h2>
           <p className="text-lg text-gray-600">
             We defend clients facing the full spectrum of criminal charges

@@ -47,7 +47,7 @@ export function PracticeAreas() {
             What We Handle
           </span>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-navy-800 mt-3 mb-6">
-            Practice Areas
+            State & Federal Practice Areas
           </h2>
           <p className="text-lg text-gray-600">
             John Miraglia provides aggressive, skilled representation across
